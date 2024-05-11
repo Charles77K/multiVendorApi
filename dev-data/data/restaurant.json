@@ -1,0 +1,157 @@
+[
+  {
+    "name": "The Amazing Grace",
+    "description": "Campus dining at its peak",
+    "img": "https://img.freepik.com/free-photo/top-view-eid-al-fitr-celebration-with-delicious-food_23-2151205180.jpg?t=st=1714397041~exp=1714400641~hmac=5f6252c8f8fd50cb56b8c183ad52806e2be01fe2d0e84ea1a3e31783027b7838&w=1060",
+    "locations": {
+      "type": "Point",
+      "description": "Godfrey Okoye University, Thinkers Corner, Enugu 400103, Enugu",
+      "coordinates": [6.469716, 7.526968]
+    },
+    "contact": {
+      "phone": "08122783621",
+      "email": "amazing@yahoo.com"
+    },
+    "openingHours": {
+      "day": 6,
+      "open": "8am",
+      "close": "6pm"
+    }
+  },
+
+  {
+    "name": "Tim Buckley",
+    "description": "Deliciouness is an uderstatement",
+    "img": "https://img.freepik.com/free-photo/flat-lay-table-full-delicious-food-composition_23-2149141358.jpg?t=st=1714397687~exp=1714401287~hmac=891dcac3d447d30fad5de6ad2eafc58e0b1dfcb1b8072e22e0c745a7a514134c&w=996",
+    "locations": {
+      "type": "Point",
+      "description": "Godfrey Okoye University, Thinkers Corner, Enugu 400103, Enugu"
+    },
+    "contact": {
+      "phone": "08023367554",
+      "email": "timbuckley@yahoo.com"
+    },
+    "openingHours": {
+      "day": 6,
+      "open": "1pm",
+      "close": "6pm"
+    }
+  },
+
+  {
+    "name": "Crispy Grillz",
+    "description": "Your satisfaction is our priority",
+    "img": "https://img.freepik.com/free-photo/grilled-chicken-legs-flaming-grill-with-grilled-vegetables-with-tomatoes-potatoes-pepper-seeds-salt_1150-37782.jpg?t=st=1714478854~exp=1714482454~hmac=8acb4498ef3536d30836c460cc7ca5a810eb6880a0a2b468750c822d3d8a5b4f&w=996",
+    "locations": {
+      "type": "Point",
+      "description": "Godfrey Okoye University, Thinkers Corner, Enugu 411303, Enugu"
+    },
+    "contact": {
+      "phone": "0814266789",
+      "email": "crispy@gmail.com"
+    },
+    "openingHours": {
+      "day": 7,
+      "open": "10am",
+      "close": "10pm"
+    }
+  },
+
+  {
+    "name": "Callis Alumni Restaurant",
+    "description": "If you can name it, You can have it",
+    "img": "https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141348.jpg?t=st=1714479880~exp=1714483480~hmac=72fe162e916be6ee917661ed1d8cc73ac27eabb49b5cd78658ee79e6fe99fa8f&w=996",
+    "locations": {
+      "type": "Point",
+      "description": "Godfrey Okoye University, Thinkers Corner, Enugu 500112, Enugu"
+    },
+    "contact": {
+      "phone": "07022567392",
+      "email": "calis@gmail.com"
+    },
+    "openingHours": {
+      "day": 7,
+      "open": "9am",
+      "close": "10pm"
+    }
+  },
+
+  {
+    "name": "Back Gate Rice",
+    "description": "If you can name it, You can have it",
+    "img": "https://img.freepik.com/free-photo/eid-al-fitr-celebration-with-delicious-food_23-2151205115.jpg?t=st=1714401952~exp=1714405552~hmac=cd2992b1716490647342ac9d817347270587112088ef54b4fa7c75d24a2694a2&w=996",
+    "locations": {
+      "type": "Point",
+      "description": "Godfrey Okoye University, Thinkers Corner, Enugu 400103, Enugu"
+    },
+    "contact": {
+      "phone": "08125563781",
+      "email": "backgate@yahoo.com"
+    },
+    "openingHours": {
+      "day": 6,
+      "open": "9am",
+      "close": "6pm"
+    }
+  },
+
+  {
+    "name": "Nourish Bistro",
+    "description": "Get your sweet deliciousness here",
+    "img": "https://img.freepik.com/free-photo/dinner-set-with-chicken-served-with-rice-french-fries-caesar-vegetable-salads-lemonade_140725-7825.jpg?t=st=1714481811~exp=1714485411~hmac=6563f8cc9a6425b0bf3fd0cbfec470886ac400e485318a34854386f9077bef5b&w=900",
+    "locations": {
+      "type": "Point",
+      "description": "Godfrey Okoye University, Thinkers Corner, Enugu 400103, Enugu",
+      "coordinates": [6.469835, 7.526928]
+    },
+    "contact": {
+      "phone": "070119288362",
+      "email": "nourisho@gmail.com"
+    },
+    "openingHours": {
+      "day": 6,
+      "open": "9am",
+      "close": "6pm"
+    }
+  },
+
+  {
+    "name": "Madam White",
+    "description": "Get all your favourite local dishes",
+    "img": "https://img.freepik.com/free-photo/top-view-table-full-food_23-2149209251.jpg?t=st=1714489459~exp=1714493059~hmac=7828b42577fcc02e793f9c2faaab9fca7e1b14ec5cd29775ac65c52959133910&w=996",
+    "locations": {
+      "type": "Point",
+      "description": "Godfrey Okoye University, Thinkers Corner, Enugu 400103, Enugu",
+      "coordinates": [6.469835, 7.526928]
+    },
+    "contact": {
+      "phone": "08022475663",
+      "email": "madamwhite@yahoo.com"
+    },
+    "openingHours": {
+      "day": 6,
+      "open": "8am",
+      "close": "9pm"
+    }
+  },
+
+  {
+    "name": "Cesma food",
+    "description": "You can purchase all your favorite food items here",
+    "img": "https://img.freepik.com/free-photo/close-up-appetizing-ramadan-meal_23-2151182479.jpg?t=st=1714562679~exp=1714566279~hmac=781924cb2903d0df27aac2bb1ddf698c62b09af22f2b1fa88558f5c73b1dbf3b&w=996",
+    "locations": {
+      "type": "Point",
+      "description": "FGCG+PP7, Thinkers Corner, Enugu 400103, Enugu",
+      "coordinates": [6.47184, 7.526748]
+    },
+    "contact": {
+      "phone": "07022893665",
+      "email": "cesmafood@gmail.com"
+    },
+    "openingHours": {
+      "day": 7,
+      "open": "8am",
+      "close": "9pm"
+    }
+  }
+]
