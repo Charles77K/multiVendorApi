@@ -14,7 +14,7 @@ exports.createMessage = catchAsync(async (req, res, next) => {
 
 exports.getMessages = catchAsync(async (req, res, next) => {
   const message = await Message.find()
-    .populate('User', 'name img')
+    .populate('User', 'name img email')
     .sort({ timestamp: -1 });
   res.status(200).json({
     status: 'success',
