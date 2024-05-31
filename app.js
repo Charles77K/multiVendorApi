@@ -8,6 +8,7 @@ const userRouter = require('./routes/userRoutes');
 const restaurantRouter = require('./routes/restaurantRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
 const productRouter = require('./routes/productRoutes');
+const messageRouter = require('./routes/messageRoutes');
 //Serving static files
 app.use(express.static('public'));
 
@@ -22,6 +23,7 @@ app.use('/api/v1/restaurant', restaurantRouter);
 app.use('/api/v1/user', userRouter);
 app.use('/api/v1/reviews', reviewRouter);
 app.use('/api/v1/products', productRouter);
+app.use('/api/v1/message', messageRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Couldn't find ${req.originalUrl} on this server`, 404));
