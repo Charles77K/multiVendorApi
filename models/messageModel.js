@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { formatDistanceToNowStrict, format } = require('date-fns');
 
 const messageSchema = new mongoose.Schema({
   User: {
@@ -16,13 +17,29 @@ const messageSchema = new mongoose.Schema({
   },
 });
 
-messageSchema.pre(/^find/, function (next) {
-  this.populate({
-    path: 'User',
-    select: 'name img email',
+messageSchema.methods.getFormattedTimestamp = function () {
+  const formattedDistance = formatDistanceToNowStrict(this.timestamp, {
+    addSuffix: false,
   });
-  next();
-});
+
+  // Parsing the result to get a more compact format
+  if (formattedDistance.includes('minute')) {
+    return formattedDistance.replace(' minute', 'm').replace(' minutes', 'm');
+  }
+  if (formattedDistance.includes('hour')) {
+    return formattedDistance.replace(' hour', 'h').replace(' hours', 'h');
+  }
+  if (formattedDistance.includes('day')) {
+    return formattedDistance.replace(' day', 'd').replace(' days', 'd');
+  }
+  if (formattedDistance.includes('month')) {
+    return formattedDistance.replace(' month', 'm').replace(' months', 'm');
+  }
+  if (formattedDistance.includes('year')) {
+    return formattedDistance.replace(' year', 'y').replace(' years', 'y');
+  }
+  return formattedDistance;
+};
 
 const Message = mongoose.model('Message', messageSchema);
 

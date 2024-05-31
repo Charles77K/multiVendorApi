@@ -13,12 +13,19 @@ exports.createMessage = catchAsync(async (req, res, next) => {
 });
 
 exports.getMessages = catchAsync(async (req, res, next) => {
-  const message = await Message.find()
+  const messages = await Message.find()
     .populate('User', 'name img email')
     .sort({ timestamp: -1 });
+
+  const formattedMessages = messages.map((message) => {
+    return {
+      ...message.toObject(), // Convert Mongoose document to plain JavaScript object
+      formattedTimestamp: message.getFormattedTimestamp(),
+    };
+  });
   res.status(200).json({
     status: 'success',
-    data: message,
+    data: formattedMessages,
   });
 });
 
