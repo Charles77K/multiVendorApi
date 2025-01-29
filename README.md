@@ -1,2 +1,2 @@
 # FirstRestApi
-An api for Godfrey Eats full stack application
+An api for DineSphere full stack application
