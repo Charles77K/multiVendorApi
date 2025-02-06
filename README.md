@@ -1,2 +1,2 @@
 # FirstRestApi
-An api for DineSphere full stack application
+API for DinseSphere mobile application
