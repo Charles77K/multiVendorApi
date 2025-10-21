@@ -1,4 +1,6 @@
 const express = require('express');
+const swaggerUi = require('swagger-ui-express');
+const swaggerJsdoc = require('swagger-jsdoc');
 const morgan = require('morgan');
 const AppError = require('./utils/appError');
 const app = express();
@@ -11,6 +13,7 @@ const reviewRouter = require('./routes/reviewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 const productRouter = require('./routes/productRoutes');
 const messageRouter = require('./routes/messageRoutes');
+const { swaggerSpec } = require('./swagger');
 //Serving static files
 app.use(express.static('public'));
 
@@ -28,6 +31,8 @@ app.use(
     credentials: true, // If your app uses cookies or auth headers
   }),
 );
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use('/api/v1/restaurant', restaurantRouter);
 app.use('/api/v1/user', userRouter);
