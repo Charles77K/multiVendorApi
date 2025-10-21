@@ -13,12 +13,13 @@ const reviewRouter = require('./routes/reviewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 const productRouter = require('./routes/productRoutes');
 const messageRouter = require('./routes/messageRoutes');
+const connectDB = require('./db/db');
 const { swaggerSpec } = require('./swagger');
-
-module.exports = app;
 
 //Serving static files
 app.use(express.static('public'));
+
+connectDB();
 
 //Body parser, reading data from body into req.body
 app.use(
@@ -49,3 +50,5 @@ app.all('*', (req, res, next) => {
 });
 
 app.use(globalErrorHandler);
+
+module.exports = app;
