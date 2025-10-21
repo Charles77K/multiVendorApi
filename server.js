@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
 const app = require('./app');
+const { swaggerDocs } = require('./swagger');
 
 dotenv.config({
   path: './config.env',
@@ -14,10 +15,10 @@ const DB = process.env.DATABASE.replace(
 
 mongoose
   .connect(DB, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
+    // useNewUrlParser: true,
+    // useCreateIndex: true,
+    // useFindAndModify: false,
+    // useUnifiedTopology: true,
     connectTimeoutMS: 3000,
   })
   .then(() => console.log('Connected to DATABASE'));
