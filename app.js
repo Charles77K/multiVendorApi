@@ -44,6 +44,18 @@ app.use(
 // Logging
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 
+const __swaggerDistPath = path.join(
+  __dirname,
+  'node_modules',
+  'swagger-ui-dist',
+);
+
+// Serve Swagger dist files manually
+app.use(
+  '/swagger-ui-dist',
+  express.static(__swaggerDistPath, { index: false }),
+);
+
 // ✅ Swagger UI route
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
