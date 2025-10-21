@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 
-const productSchema = new mongoose.Schema(
+const { Schema, model } = mongoose;
+
+const productSchema = new Schema(
   {
     title: {
       type: String,
@@ -42,6 +44,6 @@ productSchema.pre(/^find/, function (next) {
   next();
 });
 
-const Product = mongoose.model('Product', productSchema);
+const Product = model('Product', productSchema);
 
 module.exports = Product;

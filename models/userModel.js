@@ -59,7 +59,7 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.pre('save', async function (next) {
-  //to run this functio if password was modified
+  //to run this function if password was modified
   if (!this.isModified('password')) return next();
 
   //hash password with a cost of 12
