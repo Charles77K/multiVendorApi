@@ -14,6 +14,9 @@ const bookingRouter = require('./routes/bookingRoutes');
 const productRouter = require('./routes/productRoutes');
 const messageRouter = require('./routes/messageRoutes');
 const { swaggerSpec } = require('./swagger');
+
+module.exports = app;
+
 //Serving static files
 app.use(express.static('public'));
 
@@ -26,7 +29,7 @@ app.use(
 
 app.use(
   cors({
-    origin: 'http://localhost:3000', // Replace with your frontend's origin
+    origin: ['http://localhost:3000', 'http://localhost:5173'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
     credentials: true, // If your app uses cookies or auth headers
   }),
@@ -46,5 +49,3 @@ app.all('*', (req, res, next) => {
 });
 
 app.use(globalErrorHandler);
-
-module.exports = app;
