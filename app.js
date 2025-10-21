@@ -1,10 +1,12 @@
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
-const swaggerJsdoc = require('swagger-jsdoc');
 const morgan = require('morgan');
 const AppError = require('./utils/appError');
 const app = express();
 const cors = require('cors');
+const dotenv = require('dotenv');
+const connectDB = require('./db/db');
+
 const globalErrorHandler = require('./controllers/errorController');
 
 const userRouter = require('./routes/userRoutes');
@@ -13,8 +15,11 @@ const reviewRouter = require('./routes/reviewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 const productRouter = require('./routes/productRoutes');
 const messageRouter = require('./routes/messageRoutes');
-const connectDB = require('./db/db');
 const { swaggerSpec } = require('./swagger');
+
+dotenv.config({
+  path: './config.env',
+});
 
 //Serving static files
 app.use(express.static('public'));
@@ -36,6 +41,16 @@ app.use(
   }),
 );
 
+// Logging
+if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
+
+// ✅ Serve Swagger static files manually
+app.use(
+  '/api-docs',
+  express.static(path.join(__dirname, 'node_modules', 'swagger-ui-dist')),
+);
+
+// ✅ Swagger UI route
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use('/api/v1/restaurant', restaurantRouter);
