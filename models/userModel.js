@@ -34,7 +34,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please confirm your password'],
     validate: {
-      //This only works on CREATE and SAVE
+      //This only works on CREATE and SAVEP
       validator: function (el) {
         return el === this.password;
       },
@@ -97,6 +97,7 @@ userSchema.methods.changedPasswordAfter = function (JWTTimeStamp) {
   } else {
     // If passwordChangedAt is not defined, return false
     return false;
+    t;
   }
 };
 

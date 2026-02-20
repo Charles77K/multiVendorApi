@@ -1,5 +1,4 @@
 const multer = require('multer');
-``;
 const User = require('./../models/userModel');
 const factory = require('./handlerFactory');
 const catchAsync = require('./../utils/catchAsync');
